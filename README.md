@@ -12,7 +12,7 @@ oferecidos - Facilitar o contato e o agendamento de consultas
 
 ## 👥 Integrantes do Grupo
 
--   Aluno 1
+-   Patrick da Silva Almeida
 -   Aluno 2
 -   Aluno 3
 -   Aluno 4
