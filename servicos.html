@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saúde+ Centro Clínico | Nossos Serviços e Especialidades</title>
+    <meta name="description"
+        content="Conheça todas as especialidades e serviços oferecidos pela Saúde+ Centro Clínico. Atendimento humanizado e infraestrutura completa para sua saúde." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                    colors: {
+                        brand: {
+                            50: "#eff6ff",
+                            100: "#dbeafe",
+                            500: "#3b82f6",
+                            600: "#2563eb",
+                            700: "#1d4ed8",
+                            green: "#10b981",
+                            dark: "#0f172a",
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #2563eb, #38bdf8);
+        }
+
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.5;
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .shadow-soft {
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-600 selection:text-white">
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 glass-nav shadow-sm transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="index.html"
+                class="text-2xl font-heading font-extrabold text-slate-800 flex items-center gap-2 z-30 hover:opacity-80 transition-opacity">
+                <span
+                    class="bg-gradient-to-br from-brand-600 to-blue-400 text-white p-1.5 rounded-lg shadow-md leading-none">S+</span>
+                Saúde<span class="text-brand-600">+</span>
+                <span class="text-slate-400 font-medium text-lg hidden sm:inline ml-1">Clínica</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 z-20">
+                <a href="index.html"
+                    class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Home</a>
+                <a href="sobre.html"
+                    class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Sobre</a>
+                <a href="servicos.html"
+                    class="text-sm font-medium text-brand-600 border-b-2 border-brand-600 pb-0.5 transition-colors">Serviços</a>
+                <a href="profissionais.html"
+                    class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Equipe</a>
+                <a href="contato.html"
+                    class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Contato</a>
+                <a href="agendamento.html"
+                    class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                    Agendar Consulta
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="md:hidden z-30 relative text-slate-800 p-2 focus:outline-none">
+                <div class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300" id="line1"></div>
+                <div class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300" id="line2"></div>
+                <div class="w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line3"></div>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-white/95 backdrop-blur-lg z-20 hidden opacity-0 flex-col justify-center items-center space-y-8">
+                <a href="index.html"
+                    class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600">Home</a>
+                <a href="sobre.html"
+                    class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600">Sobre</a>
+                <a href="servicos.html"
+                    class="mobile-link text-2xl font-heading font-medium text-brand-600">Serviços</a>
+                <a href="profissionais.html"
+                    class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600">Equipe</a>
+                <a href="contato.html"
+                    class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600">Contato</a>
+                <a href="agendamento.html"
+                    class="mobile-link bg-brand-600 text-white px-8 py-3.5 rounded-full font-medium text-lg shadow-lg">
+                    Agendar Consulta
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER HERO -->
+    <section class="relative pt-40 pb-20 overflow-hidden bg-white">
+        <!-- Animated Blobs -->
+        <div class="blob bg-brand-100 w-96 h-96 top-0 left-[-10%] mix-blend-multiply"></div>
+        <div class="blob bg-blue-100 w-80 h-80 bottom-[-10%] right-[10%] mix-blend-multiply"
+            style="animation-delay: 2s">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+            <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-3 block hero-item opacity-0">O
+                Cuidado que Você Merece</span>
+            <h1 class="text-5xl md:text-6xl font-heading font-bold text-slate-900 mb-6 hero-item opacity-0">
+                Nossos <span class="gradient-text">Serviços e Especialidades</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-10 hero-item opacity-0">
+                Oferecemos uma estrutura médica completa com profissionais altamente capacitados em diversas áreas para
+                garantir
+                o seu bem-estar e o de toda a sua família, com todo conforto e segurança.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN SERVICES GRID -->
+    <section class="py-20 bg-slate-50 relative">
+        <div class="container mx-auto px-6 relative z-10 block-servicos">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                <!-- Serviço 1 (Clínica Geral) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Clínica Geral</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Avaliação de rotina, check-ups completos, diagnósticos precisos e acompanhamento contínuo e
+                        integrado para
+                        adultos.
+                    </p>
+                </div>
+
+                <!-- Serviço 2 (Pediatria) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-brand-green group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Pediatria</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Cuidado especializado e carinhoso para recém-nascidos, crianças e adolescentes, focando no
+                        desenvolvimento
+                        saudável.
+                    </p>
+                </div>
+
+                <!-- Serviço 3 (Cardiologia) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-red-500 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Cardiologia</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Prevenção, diagnóstico médico e tratamento de diversas doenças do coração e do sistema
+                        circulatório do
+                        paciente.
+                    </p>
+                </div>
+
+                <!-- Serviço 4 (Exames) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-purple-500 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Exames Laboratoriais</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Laboratório clínico moderno integrado com resultados rápidos, exatos, precisos e garantindo
+                        total segurança
+                        para você.
+                    </p>
+                </div>
+
+                <!-- Serviço 5 (Ginecologia) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-pink-500 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Ginecologia</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Amparo e saúde preventiva para a mulher em todas as fases de vida, priorizando respeito,
+                        conforto
+                        psicológico e discrição.
+                    </p>
+                </div>
+
+                <!-- Serviço 6 (Dermatologia) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Dermatologia</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Tratamentos clínicos, cirúrgicos e procedimentos médicos com foco estético para cuidar
+                        fortemente da pele,
+                        cabelos e unhas.
+                    </p>
+                </div>
+
+                <!-- Serviço 7 (Psicologia) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-indigo-500 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Psicologia</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Terapias focadas exclusivamente no cuidado mental, proporcionando ferramentas e acolhimento para
+                        o
+                        autoconhecimento.
+                    </p>
+                </div>
+
+                <!-- Serviço 8 (Nutrição) -->
+                <div
+                    class="service-card opacity-0 p-8 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-emerald-600 group-hover:text-white transition-colors" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-slate-800">Nutrição</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Emagrecimento com reeducação alimentar, controle de doenças e planos sempre dietéticos que se
+                        adaptam
+                        exatamente ao seu dia a dia.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION INFO EXTRA -->
+    <section class="py-24 bg-white relative block-features border-t border-slate-100">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative feature-item opacity-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-brand-600/20 to-brand-100/50 rounded-[2rem] transform -translate-x-4 translate-y-4 -z-10 blur-sm">
+                </div>
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
+                    alt="Equipamentos modernos"
+                    class="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover ring-1 ring-slate-900/5" />
+            </div>
+            <div class="space-y-8 feature-item opacity-0">
+                <div>
+                    <span
+                        class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-3 block">Infraestrutura</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">
+                        Tecnologia e Segurança em cada Atendimento
+                    </h2>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    Todos os nossos exames, triagens e procedimentos se beneficiam com uso maciço da alta tecnologia
+                    para exatidão
+                    impecável nos resultados analíticos.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <div class="bg-brand-50 p-2 rounded-full text-brand-600 mt-1">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Salas de Exames Modernas</h4>
+                            <p class="text-slate-500 text-sm">Equipamentos recém calibrados e prontos para todas
+                                exigências
+                                analíticas.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-brand-50 p-2 rounded-full text-brand-600 mt-1">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Protocolos de Qualidade</h4>
+                            <p class="text-slate-500 text-sm">Rigoroso controle biológico, certificando alto padrão
+                                sanitário por toda
+                                equipe.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="container mx-auto px-6 py-24 relative block-cta">
+        <div
+            class="cta-content opacity-0 bg-gradient-to-br from-brand-600 to-blue-800 rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl">
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-2xl">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/20 rounded-full -translate-x-1/4 translate-y-1/4 blur-3xl">
+            </div>
+
+            <div class="relative z-10 max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 leading-tight">
+                    Pronto para cuidar da sua saúde?
+                </h2>
+                <p class="text-xl text-blue-100 mb-10 leading-relaxed">
+                    Agende agora mesmo uma consulta com um de nossos grandes especialistas em serviços clínicos de
+                    primeira linha.
+                </p>
+                <a href="agendamento.html"
+                    class="inline-flex items-center gap-2 bg-white text-brand-700 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+                    Ver Horários Disponíveis
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 pt-20 pb-8 border-t border-slate-900 block-footer">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <div class="md:col-span-4 footer-item opacity-0">
+                    <div class="text-2xl font-heading font-extrabold text-white flex items-center gap-2 mb-6">
+                        <span class="bg-brand-600 text-white p-1.5 rounded-lg">S+</span>
+                        Saúde<span class="text-brand-500">+</span>
+                    </div>
+                    <p class="leading-relaxed mb-6">
+                        Cuidado, inovação e dedicação em cada atendimento. Sua saúde e
+                        bem-estar são a nossa prioridade número um todos os dias.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-all text-slate-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-all text-slate-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 footer-item opacity-0">
+                    <h5 class="text-white font-heading font-bold mb-6 text-lg">
+                        Navegação
+                    </h5>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="index.html" class="hover:text-brand-500 transition">Início</a>
+                        </li>
+                        <li>
+                            <a href="sobre.html" class="hover:text-brand-500 transition">Sobre Nós</a>
+                        </li>
+                        <li>
+                            <a href="servicos.html" class="hover:text-brand-500 transition">Especialidades</a>
+                        </li>
+                        <li>
+                            <a href="profissionais.html" class="hover:text-brand-500 transition">Médicos</a>
+                        </li>
+                        <li>
+                            <a href="contato.html" class="hover:text-brand-500 transition">Contato</a>
+                        </li>
+                        <li>
+                            <a href="agendamento.html" class="hover:text-brand-500 transition">Agendamento</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 footer-item opacity-0">
+                    <h5 class="text-white font-heading font-bold mb-6 text-lg">
+                        Contato
+                    </h5>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-500 mt-1"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg></span>
+                            (11) 4004-0000
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-500 mt-1"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg></span>
+                            contato@saudemais.com.br
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-500 mt-1"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg></span>
+                            Av. Paulista, 1000<br />São Paulo, SP
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 footer-item opacity-0">
+                    <h5 class="text-white font-heading font-bold mb-6 text-lg">
+                        Horário de Atendimento
+                    </h5>
+                    <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                        <div class="flex justify-between border-b border-slate-800 pb-3 mb-3">
+                            <span>Seg - Sex</span>
+                            <span class="text-white font-medium">08h - 20h</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-800 pb-3 mb-3">
+                            <span>Sábado</span>
+                            <span class="text-white font-medium">08h - 14h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Domingo</span>
+                            <span class="text-brand-500 font-medium">Emergência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>
+                    &copy; 2024 Saúde+ Centro Clínico. Todos os direitos reservados.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition">Política de Privacidade</a>
+                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FRAMER MOTION SCRIPTS E LOGICA -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
