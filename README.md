@@ -13,7 +13,7 @@ oferecidos - Facilitar o contato e o agendamento de consultas
 ## 👥 Integrantes do Grupo
 
 -   Patrick da Silva Almeida
--   Aluno 2
+-   Gustavo Ribeiro Carpanez
 -   Aluno 3
 -   Aluno 4
 -   Aluno 5
