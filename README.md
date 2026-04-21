@@ -35,7 +35,7 @@ oferecidos - Facilitar o contato e o agendamento de consultas
 
 O site está hospedado utilizando **GitHub Pages**.
 
-🔗 Acesse: https://seu-usuario.github.io/seu-repositorio
+🔗 Acesse: https://patrickstar-code.github.io/Clinica_Saude_IA/
 
 ------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ solicitado no projeto.
 
 ``` bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone [https://github.com/](https://github.com/PatrickStar-code/Clinica_Saude_IA.git)
 
 # Acesse a pasta
 cd seu-repositorio
