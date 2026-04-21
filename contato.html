@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saúde+ Centro Clínico | Contato</title>
+    <meta
+      name="description"
+      content="Fale conosco. Tire suas dúvidas, envie sugestões ou solicite informações sobre nossos serviços."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Outfit", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                green: "#10b981",
+                dark: "#0f172a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc;
+        color: #0f172a;
+        overflow-x: hidden;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .gradient-text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #2563eb, #38bdf8);
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-brand-600 selection:text-white">
+    <!-- HEADER -->
+    <header
+      class="fixed w-full top-0 z-50 glass-nav shadow-sm transition-all duration-300"
+      id="navbar"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center relative"
+      >
+        <div
+          class="text-2xl font-heading font-extrabold text-slate-800 flex items-center gap-2 z-30"
+        >
+          <span
+            class="bg-gradient-to-br from-brand-600 to-blue-400 text-white p-1.5 rounded-lg shadow-md leading-none"
+            >S+</span
+          >
+          Saúde<span class="text-brand-600">+</span>
+          <span class="text-slate-400 font-medium text-lg hidden sm:inline ml-1"
+            >Clínica</span
+          >
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 z-20">
+          <a
+            href="index.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="sobre.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Sobre</a
+          >
+          <a
+            href="servicos.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Serviços</a
+          >
+          <a
+            href="profissionais.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Equipe</a
+          >
+          <a
+            href="contato.html"
+            class="text-sm font-medium text-brand-600 border-b-2 border-brand-600 pb-0.5 transition-colors"
+            >Contato</a
+          >
+          <a
+            href="agendamento.html"
+            class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Agendar Consulta
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button
+          id="menu-btn"
+          class="md:hidden z-30 relative text-slate-800 p-2 focus:outline-none"
+        >
+          <div
+            class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300"
+            id="line1"
+          ></div>
+          <div
+            class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300"
+            id="line2"
+          ></div>
+          <div
+            class="w-6 h-0.5 bg-slate-800 transition-all duration-300"
+            id="line3"
+          ></div>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-white/95 backdrop-blur-lg z-40 hidden opacity-0 flex-col justify-center items-center space-y-8"
+    >
+      <a
+        href="index.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Home</a
+      >
+      <a
+        href="sobre.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Sobre</a
+      >
+      <a
+        href="servicos.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Serviços</a
+      >
+      <a
+        href="profissionais.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Equipe</a
+      >
+      <a
+        href="contato.html"
+        class="mobile-link text-2xl font-heading font-medium text-brand-600"
+        >Contato</a
+      >
+      <a
+        href="agendamento.html"
+        class="mobile-link bg-brand-600 text-white px-8 py-3.5 rounded-full font-medium text-lg shadow-lg"
+      >
+        Agendar Consulta
+      </a>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="pt-32 pb-24 bg-white relative">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
+            Fale <span class="gradient-text">Conosco</span>
+          </h1>
+          <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+            Estamos aqui para ajudar. Utilize um de nossos canais de atendimento ou preencha o formulário abaixo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div class="space-y-8">
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+              <h3 class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center">📍</span>
+                Endereço
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Av. Paulista, 1000 - Bela Vista<br />
+                São Paulo - SP, 01310-100
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+              <h3 class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center">📞</span>
+                Telefone & WhatsApp
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                (11) 4004-0000<br />
+                (11) 99999-9999 (WhatsApp)
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+              <h3 class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center">✉️</span>
+                E-mail
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                contato@saudemais.com.br<br />
+                agendamento@saudemais.com.br
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100">
+            <form action="#" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 mb-2">Nome Completo</label>
+                  <input type="text" placeholder="Seu nome" class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all" />
+                </div>
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 mb-2">E-mail</label>
+                  <input type="email" placeholder="seu@email.com" class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Assunto</label>
+                <select class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all appearance-none">
+                  <option>Dúvidas Gerais</option>
+                  <option>Agendamento</option>
+                  <option>Elogios / Sugestões</option>
+                  <option>Reclamações</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Mensagem</label>
+                <textarea rows="5" placeholder="Como podemos te ajudar?" class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brand-600 text-white py-5 rounded-xl font-bold hover:bg-brand-700 shadow-lg shadow-brand-500/30 transition-all hover:-translate-y-1">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 pt-20 pb-8 border-t border-slate-900">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2024 Saúde+ Centro Clínico. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saúde+ Centro Clínico | Agendamento Online</title>
+    <meta
+      name="description"
+      content="Agende sua consulta de forma rápida e segura. Escolha o melhor horário para você."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Outfit", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                green: "#10b981",
+                dark: "#0f172a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc;
+        color: #0f172a;
+        overflow-x: hidden;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .gradient-text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #2563eb, #38bdf8);
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-brand-600 selection:text-white">
+    <!-- HEADER -->
+    <header
+      class="fixed w-full top-0 z-50 glass-nav shadow-sm transition-all duration-300"
+      id="navbar"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center relative"
+      >
+        <div
+          class="text-2xl font-heading font-extrabold text-slate-800 flex items-center gap-2 z-30"
+        >
+          <span
+            class="bg-gradient-to-br from-brand-600 to-blue-400 text-white p-1.5 rounded-lg shadow-md leading-none"
+            >S+</span
+          >
+          Saúde<span class="text-brand-600">+</span>
+          <span class="text-slate-400 font-medium text-lg hidden sm:inline ml-1"
+            >Clínica</span
+          >
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 z-20">
+          <a
+            href="index.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="sobre.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Sobre</a
+          >
+          <a
+            href="servicos.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Serviços</a
+          >
+          <a
+            href="profissionais.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Equipe</a
+          >
+          <a
+            href="contato.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Contato</a
+          >
+          <a
+            href="agendamento.html"
+            class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium text-sm border-2 border-brand-600 hover:bg-brand-700 hover:border-brand-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Agendar Consulta
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button
+          id="menu-btn"
+          class="md:hidden z-30 relative text-slate-800 p-2 focus:outline-none"
+        >
+          <div
+            class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300"
+            id="line1"
+          ></div>
+          <div
+            class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300"
+            id="line2"
+          ></div>
+          <div
+            class="w-6 h-0.5 bg-slate-800 transition-all duration-300"
+            id="line3"
+          ></div>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-white/95 backdrop-blur-lg z-40 hidden opacity-0 flex-col justify-center items-center space-y-8"
+    >
+      <a
+        href="index.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Home</a
+      >
+      <a
+        href="sobre.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Sobre</a
+      >
+      <a
+        href="servicos.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Serviços</a
+      >
+      <a
+        href="profissionais.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Equipe</a
+      >
+      <a
+        href="contato.html"
+        class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+        >Contato</a
+      >
+      <a
+        href="agendamento.html"
+        class="mobile-link bg-brand-600 text-white px-8 py-3.5 rounded-full font-medium text-lg shadow-lg"
+      >
+        Agendar Consulta
+      </a>
+    </div>
+
+    <!-- BOOKING SECTION -->
+    <section class="pt-32 pb-24 bg-slate-50 relative min-h-screen">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
+              Agendamento <span class="gradient-text">Online</span>
+            </h1>
+            <p class="text-slate-600 text-lg">
+              Escolha a especialidade, o médico e o melhor horário para você.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
+            <div class="p-8 md:p-12">
+              <form action="#" class="space-y-8">
+                <!-- Step 1: Especialidade -->
+                <div class="space-y-4">
+                  <h3 class="text-xl font-heading font-bold text-slate-900 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-sm">1</span>
+                    Selecione a Especialidade
+                  </h3>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="relative cursor-pointer">
+                      <input type="radio" name="esp" class="peer sr-only" checked />
+                      <div class="p-4 border-2 border-slate-100 rounded-2xl peer-checked:border-brand-500 peer-checked:bg-brand-50 transition-all text-center">
+                        <span class="block font-bold">Clínica Geral</span>
+                      </div>
+                    </label>
+                    <label class="relative cursor-pointer">
+                      <input type="radio" name="esp" class="peer sr-only" />
+                      <div class="p-4 border-2 border-slate-100 rounded-2xl peer-checked:border-brand-500 peer-checked:bg-brand-50 transition-all text-center">
+                        <span class="block font-bold">Pediatria</span>
+                      </div>
+                    </label>
+                    <label class="relative cursor-pointer">
+                      <input type="radio" name="esp" class="peer sr-only" />
+                      <div class="p-4 border-2 border-slate-100 rounded-2xl peer-checked:border-brand-500 peer-checked:bg-brand-50 transition-all text-center">
+                        <span class="block font-bold">Cardiologia</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Step 2: Data e Hora -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-heading font-bold text-slate-900 flex items-center gap-3">
+                      <span class="w-8 h-8 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-sm">2</span>
+                      Escolha a Data
+                    </h3>
+                    <input type="date" class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none" />
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-heading font-bold text-slate-900 flex items-center gap-3">
+                      <span class="w-8 h-8 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-sm">3</span>
+                      Escolha o Horário
+                    </h3>
+                    <div class="grid grid-cols-3 gap-2">
+                      <button type="button" class="py-2 border border-slate-200 rounded-lg hover:bg-brand-500 hover:text-white transition-all">08:00</button>
+                      <button type="button" class="py-2 border border-slate-200 rounded-lg hover:bg-brand-500 hover:text-white transition-all">09:30</button>
+                      <button type="button" class="py-2 border border-slate-200 rounded-lg hover:bg-brand-500 hover:text-white transition-all">11:00</button>
+                      <button type="button" class="py-2 border border-slate-200 rounded-lg hover:bg-brand-500 hover:text-white transition-all">14:00</button>
+                      <button type="button" class="py-2 border border-slate-200 rounded-lg hover:bg-brand-500 hover:text-white transition-all">15:30</button>
+                      <button type="button" class="py-2 border border-slate-200 rounded-lg hover:bg-brand-500 hover:text-white transition-all">17:00</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4: Seus Dados -->
+                <div class="space-y-4 pt-4">
+                  <h3 class="text-xl font-heading font-bold text-slate-900 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-sm">4</span>
+                    Confirme seus Dados
+                  </h3>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Seu nome" class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-brand-500" />
+                    <input type="tel" placeholder="Seu WhatsApp" class="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-brand-500" />
+                  </div>
+                </div>
+
+                <div class="pt-6">
+                  <button type="submit" class="w-full bg-brand-600 text-white py-5 rounded-2xl font-bold text-lg hover:bg-brand-700 shadow-xl shadow-brand-500/20 transition-all hover:-translate-y-1">
+                    Confirmar Agendamento Agora
+                  </button>
+                  <p class="text-center text-slate-400 text-sm mt-4">
+                    Ao confirmar, você receberá um lembrete via WhatsApp.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 pt-12 pb-8 border-t border-slate-900">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2024 Saúde+ Centro Clínico. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

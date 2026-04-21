@@ -14,6 +14,7 @@ function toggleMenu() {
   isMenuOpen = !isMenuOpen;
 
   if (isMenuOpen) {
+    document.body.style.overflow = "hidden";
     mobileMenu.classList.remove("hidden");
     mobileMenu.classList.add("flex");
     line1.style.transform = "translateY(8px) rotate(45deg)";
@@ -27,6 +28,7 @@ function toggleMenu() {
       { delay: stagger(0.1), duration: 0.4 }
     );
   } else {
+    document.body.style.overflow = "";
     line1.style.transform = "none";
     line2.style.opacity = "1";
     line3.style.transform = "none";
