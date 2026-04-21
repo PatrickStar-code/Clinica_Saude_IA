@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saúde+ Centro Clínico | Sobre Nós</title>
+    <meta
+      name="description"
+      content="Conheça a história, missão e os diferenciais da Saúde+ Centro Clínico. Excelência e atendimento humanizado para você e sua família."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Outfit", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                green: "#10b981",
+                dark: "#0f172a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc;
+        color: #0f172a;
+        overflow-x: hidden;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .gradient-text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #2563eb, #38bdf8);
+      }
+      .shadow-soft {
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-brand-600 selection:text-white">
+    <!-- HEADER -->
+    <header
+      class="fixed w-full top-0 z-50 glass-nav shadow-sm transition-all duration-300"
+      id="navbar"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center relative"
+      >
+        <div
+          class="text-2xl font-heading font-extrabold text-slate-800 flex items-center gap-2 z-30"
+        >
+          <span
+            class="bg-gradient-to-br from-brand-600 to-blue-400 text-white p-1.5 rounded-lg shadow-md leading-none"
+            >S+</span
+          >
+          Saúde<span class="text-brand-600">+</span>
+          <span class="text-slate-400 font-medium text-lg hidden sm:inline ml-1"
+            >Clínica</span
+          >
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 z-20">
+          <a
+            href="index.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="sobre.html"
+            class="text-sm font-medium text-brand-600 border-b-2 border-brand-600 pb-0.5 transition-colors"
+            >Sobre</a
+          >
+          <a
+            href="servicos.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Serviços</a
+          >
+          <a
+            href="profissionais.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Equipe</a
+          >
+          <a
+            href="contato.html"
+            class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors"
+            >Contato</a
+          >
+          <a
+            href="agendamento.html"
+            class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Agendar Consulta
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button
+          id="menu-btn"
+          class="md:hidden z-30 relative text-slate-800 p-2 focus:outline-none"
+        >
+          <div
+            class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300"
+            id="line1"
+          ></div>
+          <div
+            class="w-6 h-0.5 bg-slate-800 mb-1.5 transition-all duration-300"
+            id="line2"
+          ></div>
+          <div
+            class="w-6 h-0.5 bg-slate-800 transition-all duration-300"
+            id="line3"
+          ></div>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="fixed inset-0 bg-white/95 backdrop-blur-lg z-20 hidden opacity-0 flex-col justify-center items-center space-y-8"
+        >
+          <a
+            href="index.html"
+            class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+            >Home</a
+          >
+          <a
+            href="sobre.html"
+            class="mobile-link text-2xl font-heading font-medium text-brand-600"
+            >Sobre</a
+          >
+          <a
+            href="servicos.html"
+            class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+            >Serviços</a
+          >
+          <a
+            href="profissionais.html"
+            class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+            >Equipe</a
+          >
+          <a
+            href="contato.html"
+            class="mobile-link text-2xl font-heading font-medium text-slate-800 hover:text-brand-600"
+            >Contato</a
+          >
+          <a
+            href="agendamento.html"
+            class="mobile-link bg-brand-600 text-white px-8 py-3.5 rounded-full font-medium text-lg shadow-lg"
+          >
+            Agendar Consulta
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION - SOBRE -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden flex items-center bg-white" id="apresentacao">
+      <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <div class="md:w-1/2 space-y-8 hero-item opacity-0" style="opacity: 1;">
+          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-3 block">Nossa História</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] text-slate-900">
+            Muito mais que uma clínica, <span class="gradient-text">um lugar de cuidado.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 max-w-lg leading-relaxed">
+            Fundada com o propósito de transformar o atendimento médico, a Saúde+ Centro Clínico une tecnologia de ponta, estrutura moderna e, acima de tudo, calor humano. 
+          </p>
+          <p class="text-lg text-slate-600 max-w-lg leading-relaxed">
+            Acreditamos que cada paciente tem uma história e merece ser ouvido, compreendido e tratado com o mais alto padrão de excelência médica. Desde a recepção até o consultório, nossa equipe trabalha incansavelmente para proporcionar a melhor experiência e segurança que você e sua família merecem.
+          </p>
+        </div>
+        <div class="md:w-1/2 relative w-full hero-item opacity-0" style="opacity: 1;">
+           <div class="absolute inset-0 bg-gradient-to-tr from-brand-600/20 to-brand-100/40 rounded-[2rem] transform translate-x-4 translate-y-4 -z-10 blur-sm"></div>
+           <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" alt="Fachada ou Equipe" class="rounded-[2rem] shadow-2xl w-full h-[450px] md:h-[550px] object-cover ring-1 ring-slate-900/5"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSÃO E VISÃO SECTION -->
+    <section class="py-24 bg-slate-50 relative" id="missao-visao">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-10 bg-white rounded-3xl shadow-soft border border-slate-100 hover:-translate-y-2 transition-all duration-300">
+             <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-brand-600">
+               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+             </div>
+             <h3 class="text-2xl font-heading font-bold mb-4 text-slate-900">Nossa Missão</h3>
+             <p class="text-slate-600 leading-relaxed">Proporcionar atendimento médico de excelência com foco no cuidado humanizado, promovendo a saúde e o bem-estar de nossos pacientes através de diagnósticos precisos e tratamentos inovadores.</p>
+          </div>
+          
+          <div class="p-10 bg-brand-600 text-white rounded-3xl shadow-soft hover:-translate-y-2 transition-all duration-300 transform md:scale-105 z-10">
+             <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 text-white">
+               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+             </div>
+             <h3 class="text-2xl font-heading font-bold mb-4 text-white">Nossa Visão</h3>
+             <p class="text-blue-100 leading-relaxed">Ser reconhecida como a clínica referência em nossa região pela alta qualidade assistencial, inovação tecnológica e pelo compromisso inabalável com a vida e a saúde humana de forma sustentável e acessível.</p>
+          </div>
+
+          <div class="p-10 bg-white rounded-3xl shadow-soft border border-slate-100 hover:-translate-y-2 transition-all duration-300">
+             <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 text-brand-green">
+               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+             </div>
+             <h3 class="text-2xl font-heading font-bold mb-4 text-slate-900">Nossos Valores</h3>
+             <ul class="text-slate-600 leading-relaxed space-y-3">
+                <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-brand-600"></div> Ética e Transparência</li>
+                <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-brand-600"></div> Empatia e Respeito</li>
+                <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-brand-600"></div> Inovação Contínua</li>
+                <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-brand-600"></div> Excelência Médica</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US / DIFERENCIAIS -->
+    <section
+      class="py-24 relative bg-slate-900 text-white overflow-hidden"
+      id="diferenciais"
+    >
+      <div
+        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-overlay"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/95 to-slate-900"
+      ></div>
+
+      <div class="container mx-auto px-6 relative z-10 block-features">
+        <div class="text-center mb-20">
+          <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm mb-3 block">Diferenciais da Clínica</span>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+            Por que escolher a Saúde+?
+          </h2>
+          <div class="h-1.5 w-24 bg-brand-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center"
+        >
+          <div class="feature-item opacity-0 space-y-5" style="opacity: 1;">
+            <div
+              class="w-20 h-20 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-slate-700"
+            >
+              🤝
+            </div>
+            <h4 class="text-xl font-heading font-bold">
+              Atendimento Humanizado
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Priorizamos a escuta ativa e o bem-estar do paciente acima de
+              tudo.
+            </p>
+          </div>
+          <div class="feature-item opacity-0 space-y-5" style="opacity: 1;">
+            <div
+              class="w-20 h-20 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-slate-700"
+            >
+              🎓
+            </div>
+            <h4 class="text-xl font-heading font-bold">
+              Profissionais Qualificados
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Médicos especialistas com vasta experiência e renome em suas
+              áreas.
+            </p>
+          </div>
+          <div class="feature-item opacity-0 space-y-5" style="opacity: 1;">
+            <div
+              class="w-20 h-20 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-slate-700"
+            >
+              🏢
+            </div>
+            <h4 class="text-xl font-heading font-bold">Estrutura Moderna</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Equipamentos de última geração e ambiente extremamente
+              confortável.
+            </p>
+          </div>
+          <div class="feature-item opacity-0 space-y-5" style="opacity: 1;">
+            <div
+              class="w-20 h-20 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-slate-700"
+            >
+              ⚡
+            </div>
+            <h4 class="text-xl font-heading font-bold">Agendamento Rápido</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Sistema online intuitivo para agendar sua consulta em alguns
+              minutos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      id="contato"
+      class="bg-slate-950 text-slate-400 pt-20 pb-8 border-t border-slate-900 block-footer"
+    >
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          <div class="md:col-span-4 footer-item opacity-0" style="opacity: 1;">
+            <div
+              class="text-2xl font-heading font-extrabold text-white flex items-center gap-2 mb-6"
+            >
+              <span class="bg-brand-600 text-white p-1.5 rounded-lg">S+</span>
+              Saúde<span class="text-brand-500">+</span>
+            </div>
+            <p class="leading-relaxed mb-6">
+              Cuidado, inovação e dedicação em cada atendimento. Sua saúde e
+              bem-estar são a nossa prioridade número um todos os dias.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-all text-slate-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-all text-slate-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 footer-item opacity-0" style="opacity: 1;">
+            <h5 class="text-white font-heading font-bold mb-6 text-lg">
+              Navegação
+            </h5>
+            <ul class="space-y-4">
+              <li>
+                <a href="index.html" class="hover:text-brand-500 transition"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a href="sobre.html" class="hover:text-brand-500 transition"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li>
+                <a href="servicos.html" class="hover:text-brand-500 transition"
+                  >Especialidades</a
+                >
+              </li>
+              <li>
+                <a
+                  href="profissionais.html"
+                  class="hover:text-brand-500 transition"
+                  >Médicos</a
+                >
+              </li>
+              <li>
+                <a href="contato.html" class="hover:text-brand-500 transition"
+                  >Contato</a
+                >
+              </li>
+              <li>
+                <a
+                  href="agendamento.html"
+                  class="hover:text-brand-500 transition"
+                  >Agendamento</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-3 footer-item opacity-0" style="opacity: 1;">
+            <h5 class="text-white font-heading font-bold mb-6 text-lg">
+              Contato
+            </h5>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-brand-500 mt-1"
+                  ><svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path></svg
+                ></span>
+                (11) 4004-0000
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-500 mt-1"
+                  ><svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path></svg
+                ></span>
+                contato@saudemais.com.br
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-500 mt-1"
+                  ><svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path></svg
+                ></span>
+                Av. Paulista, 1000<br />São Paulo, SP
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-3 footer-item opacity-0" style="opacity: 1;">
+            <h5 class="text-white font-heading font-bold mb-6 text-lg">
+              Horário de Atendimento
+            </h5>
+            <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+              <div
+                class="flex justify-between border-b border-slate-800 pb-3 mb-3"
+              >
+                <span>Seg - Sex</span>
+                <span class="text-white font-medium">08h - 20h</span>
+              </div>
+              <div
+                class="flex justify-between border-b border-slate-800 pb-3 mb-3"
+              >
+                <span>Sábado</span>
+                <span class="text-white font-medium">08h - 14h</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Domingo</span>
+                <span class="text-brand-500 font-medium">Emergência</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GOOGLE MAPS -->
+        <div class="mb-16 footer-item opacity-0" style="opacity: 1;">
+          <h5 class="text-white font-heading font-bold mb-6 text-lg">
+            Nossa Localização
+          </h5>
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-800 shadow-lg"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0976951582764!2d-46.65512672467574!3d-23.564611161639706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c0c6c2!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização Saúde+ Centro Clínico"
+            ></iframe>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm"
+        >
+          <p>
+            &copy; 2024 Saúde+ Centro Clínico. Todos os direitos reservados.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-white transition"
+              >Política de Privacidade</a
+            >
+            <a href="#" class="hover:text-white transition">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="js/main.js"></script>
+    <script>
+      // Garante que o menu mobile funcione mesmo sem o JS principal caso haja algum problema
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+              mobileMenu.classList.remove('hidden');
+              setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0');
+                mobileMenu.classList.add('opacity-100', 'flex');
+              }, 10);
+              line1.classList.add('rotate-45', 'translate-y-2');
+              line2.classList.add('opacity-0');
+              line3.classList.add('-rotate-45', '-translate-y-2');
+            } else {
+              mobileMenu.classList.remove('opacity-100');
+              mobileMenu.classList.add('opacity-0');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+              }, 300);
+              line1.classList.remove('rotate-45', 'translate-y-2');
+              line2.classList.remove('opacity-0');
+              line3.classList.remove('-rotate-45', '-translate-y-2');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
