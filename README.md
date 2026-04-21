@@ -15,7 +15,7 @@ oferecidos - Facilitar o contato e o agendamento de consultas
 -   Patrick da Silva Almeida
 -   Gustavo Ribeiro Carpanez
 -   Pedro Henrique Vicente Silva
--   Aluno 4
+-   Pedro Paulo Reis Rodrigues
 -   Aluno 5
 
 ------------------------------------------------------------------------
